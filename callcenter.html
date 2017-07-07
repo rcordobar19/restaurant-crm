@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CompanyName | Callcenter</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--Sidebar goes Here-->
+        <div id="includeSidebar"></div>
+
+        <div id="page-wrapper" class="gray-bg">
+            <!--Navbar goes here-->
+            <div id="includeTopNavbar"></div>
+
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Callcenter</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <strong>Callcenter</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row" style="margin-bottom: 40px;">
+                    <div class="col-lg-8">
+                        <div class="form-group" id="data_5">
+                            <label class="font-noraml">Select Time Range</label>
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
+                                <span class="input-group-addon">to</span>
+                                <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+                            </div>
+                        </div>
+                    </div>
+                </div strik>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Calls Inbound/Outbound</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="barChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Call Statistics Inbound Calls</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="doughnutChart" height="140"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Ticket list</h5>
+                        <div class="ibox-tools">
+                            <a class="btn btn-primary btn-sm">
+                                + Add New
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content m-b-sm border-bottom">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label" for="search">Search</label>
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Search" class="input-sm form-control">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label" for="dispositionCode">Disposition Codes</label>
+                                    <select name="status" id="dispositionCode" class="form-control">
+                                        <option value="1" selected="">Event Bookings</option>
+                                        <option value="0">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label" for="status">Ticket Status</label>
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="1" selected="">New</option>
+                                        <option value="0">Old</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox">
+                    <div class="ibox-content m-b-sm border-bottom">
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">NEW</span>
+                                    </td>
+                                    <td>
+                                        Ticket 23
+                                        <p>
+                                            <small>This is the issue with the corresponding note</small>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        adriannovak@gmail.com
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td>
+                                        <span class="pie">0.52,1.041</span> 2d
+                                    </td>
+                                    <td>
+                                        <span class="label">Event Booking</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-warning">Pending Customer</span>
+                                    </td>
+                                    <td>
+                                        Ticket 07
+                                        <p>
+                                            <small>Renaissance, Lorem ipsum dolor sit cingae.</small>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        adriannovak@gmail.com
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td>
+                                        <span class="pie">1.00,1.041</span> 1d
+                                    </td>
+                                    <td>
+                                        <span class="label">Take Out</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-info">Re Opened</span>
+                                    </td>
+                                    <td>
+                                        Ticket 10
+                                        <p>
+                                            <small>Renaissance, Lorem ipsum dolor sit cingae.</small>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        adriannovak@gmail.com
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td>
+                                        <span class="pie">0.10,1.041</span> 2d
+                                    </td>
+                                    <td>
+                                        <span class="label">Complaint</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- Peity | pie thing -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <script>
+        $(function () {
+            //Includes, dont forget to remove.
+            $("#includeSidebar").load("sidebar.html");
+            $("#includeTopNavbar").load("topNavbar.html");
+
+            //Date Range Picker
+            $('#data_5 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+            // Charts
+            var barData = {
+                labels: ["Total"],
+                datasets: [
+                    {
+                        label: "Inbound",
+                        backgroundColor: 'rgba(220, 220, 220, 0.5)',
+                        pointBorderColor: "#fff",
+                        data: [65]
+                    },
+                    {
+                        label: "Outbound",
+                        backgroundColor: 'rgba(26,179,148,0.5)',
+                        borderColor: "rgba(26,179,148,0.7)",
+                        pointBackgroundColor: "rgba(26,179,148,1)",
+                        pointBorderColor: "#fff",
+                        data: [48]
+                    }
+                ]
+            };
+            var barOptions = {
+                responsive: true
+            };
+            var ctx2 = document.getElementById("barChart").getContext("2d");
+            new Chart(ctx2, {type: 'bar', data: barData, options:barOptions});
+
+            var doughnutData = {
+                labels: ["Answered Calls","Missed Calls"],
+                datasets: [{
+                    data: [60,40],
+                    backgroundColor: ["#a3e1d4","#dedede"]
+                }]
+            } ;
+            var doughnutOptions = {
+                responsive: true
+            };
+            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+            new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+            // Peity - Pie Table
+            $("span.pie").peity("pie", {
+                fill: ['#1ab394', '#d7d7d7']
+            })
+
+        });
+    </script>
+</body>
+</html>
