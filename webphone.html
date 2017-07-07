@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CompanyName | WebPhone</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Textarea markdown-->
+    <link href="css/plugins/bootstrap-markdown/bootstrap-markdown.min.css" rel="stylesheet">
+    <!--Select 2-->
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+    <!--Sidebar goes Here-->
+    <div id="includeSidebar"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <!--Navbar goes here-->
+        <div id="includeTopNavbar"></div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="widget-head-color-box navy-bg p-xl">
+                <div class="row">
+                    <div class="label-warning" style="margin-top: 10px;padding: 10px;width: 60px;position: absolute;top: 20px;left: 10px;text-align: center;border-top-left-radius: 5px;border-bottom-right-radius: 5px;font-weight: 600;font-size: large;">VIP</div>
+                    <div class="col-lg-2">
+                        <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                    </div>
+                    <div class="col-lg-5">
+                        <h2>
+                            Janet Smith
+                        </h2>
+                        <ul class="list-unstyled m-t-md">
+                            <li>
+                                <span class="fa fa-envelope m-r-xs"></span>
+                                <label>Email:</label>
+                                mike@mail.com
+                            </li>
+                            <li>
+                                <span class="fa fa-home m-r-xs"></span>
+                                <label>Address:</label>
+                                Street 200, Avenue 10
+                            </li>
+                            <li>
+                                <span class="fa fa-phone m-r-xs"></span>
+                                <label>Contact:</label>
+                                (+121) 678 3462
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5" style="color:#676a6c">
+                        <!--<textarea id="notes" class="form-control" rows="5" placeholder="Type your notes here" style="padding: 10px;"></textarea>-->
+                    </div>
+                </div>
+            </div>
+            <div class="widget-text-box">
+                <style>
+                    .select2-results__option {
+                        border-left :5px solid red;
+                    }
+                </style>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <select class="select2_demo_1 form-control">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="select2_demo_1 form-control">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Previous Notes</h3>
+                        <div>
+                            <div class="chat-element">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <p class="m-b-xs">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chat-element">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <p class="m-b-xs">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chat-element">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <p class="m-b-xs">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- Bootstrap markdown -->
+<script src="js/plugins/bootstrap-markdown/bootstrap-markdown.js"></script>
+<script src="js/plugins/bootstrap-markdown/markdown.js"></script>
+<!-- Select2 -->
+<script src="js/plugins/select2/select2.full.min.js"></script>
+<script>
+    $(function () {
+        $(".select2_demo_1").select2();
+        //Profile TextArea
+        $("#notes").markdown({
+            autofocus:false,
+            savable:false,
+            hiddenButtons: ['cmdPreview', 'cmdImage', 'cmdQuote', 'cmdCode', 'cmdUrl'],
+        });
+        //Includes, dont forget to remove.
+        $("#includeSidebar").load("sidebar.html");
+        $("#includeTopNavbar").load("topNavbar.html");
+
+    });
+</script>
+</body>
+</html>
