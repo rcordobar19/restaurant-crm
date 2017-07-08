@@ -14,8 +14,6 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!--Textarea markdown-->
-    <link href="css/plugins/bootstrap-markdown/bootstrap-markdown.min.css" rel="stylesheet">
     <!--Select 2-->
     <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
 </head>
@@ -59,7 +57,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-5" style="color:#676a6c">
-                        <!--<textarea id="notes" class="form-control" rows="5" placeholder="Type your notes here" style="padding: 10px;"></textarea>-->
+                        <textarea class="form-control" style="border-radius:5px;" name="" id="" cols="30" rows="7" placeholder="Type your notes here"></textarea>
                     </div>
                 </div>
             </div>
@@ -126,11 +124,113 @@
                 </div>
             </div>
         </div>
+        <div class="wrapper wrapper-content  animated fadeInRight" style="padding-top: 0;">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>New</h3>
+                            <ul class="sortable-list connectList agile-list" id="todo">
+                                <li class="warning-element" id="task1" style="overflow: hidden;">
+                                    <a href="#" class="pull-left" style="padding-right: 10px;">
+                                        <img alt="image" class="img-circle" src="img/a2.jpg" style="width: 45px;height: 45px;">
+                                    </a>
+                                    <h3 style="margin-bottom: 5px;font-size: 15px;">James Cameron</h3>
+                                    <div class="agile-detail">
+                                        234 Brodway Street, <br>
+                                        New York, NY, 11344
+                                        <a href="#" class="pull-right btn btn-xs btn-warning">VIP</a>
+                                    </div>
+                                </li>
+                                <li class="success-element" id="task2" style="overflow: hidden;">
+                                    <a href="#" class="pull-left" style="padding-right: 10px;">
+                                        <img alt="image" class="img-circle" src="img/a3.jpg" style="width: 45px;height: 45px;">
+                                    </a>
+                                    <h3 style="margin-bottom: 5px;font-size: 15px;">James Cameron</h3>
+                                    <div class="agile-detail">
+                                        234 Brodway Street, <br>
+                                        New York, NY, 11344
+                                        <a href="#" class="pull-right btn btn-xs btn-warning">VIP</a>
+                                    </div>
+                                </li>
+                                <li class="info-element" id="task3" style="overflow: hidden;">
+                                    <a href="#" class="pull-left" style="padding-right: 10px;">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg" style="width: 45px;height: 45px;">
+                                    </a>
+                                    <h3 style="margin-bottom: 5px;font-size: 15px;">James Cameron</h3>
+                                    <div class="agile-detail">
+                                        234 Brodway Street, <br>
+                                        New York, NY, 11344
+                                        <a href="#" class="pull-right btn btn-xs btn-warning">VIP</a>
+                                    </div>
+                                </li>
+                                <li class="danger-element" id="task4">
+                                    All the Lorem Ipsum generators
+                                    <div class="agile-detail">
+                                        <a href="#" class="pull-right btn btn-xs btn-primary">Done</a>
+                                        <i class="fa fa-clock-o"></i> 06.10.2015
+                                    </div>
+                                </li>
+                                <li class="warning-element" id="task5">
+                                    Which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                    <div class="agile-detail">
+                                        <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                        <i class="fa fa-clock-o"></i> 09.12.2015
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>In Progress</h3>
+                            <ul class="sortable-list connectList agile-list" id="inprogress">
+                                <li class="success-element" id="task9">
+                                    Quisque venenatis ante in porta suscipit.
+                                    <div class="agile-detail">
+                                        <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                        <i class="fa fa-clock-o"></i> 12.10.2015
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Callback</h3>
+                            <ul class="sortable-list connectList agile-list" id="completed">
+                                <li class="info-element" id="task16">
+                                    Sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    <div class="agile-detail">
+                                        <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                        <i class="fa fa-clock-o"></i> 16.11.2015
+                                    </div>
+                                </li>
+                                <li class="warning-element" id="task17">
+                                    Ut porttitor augue non sapien mollis accumsan.
+                                    Nulla non elit eget lacus elementum viverra.
+                                    <div class="agile-detail">
+                                        <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                        <i class="fa fa-clock-o"></i> 09.12.2015
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Mainly scripts -->
 <script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery-ui-1.10.4.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -139,24 +239,23 @@
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
 
-<!-- Bootstrap markdown -->
-<script src="js/plugins/bootstrap-markdown/bootstrap-markdown.js"></script>
-<script src="js/plugins/bootstrap-markdown/markdown.js"></script>
 <!-- Select2 -->
 <script src="js/plugins/select2/select2.full.min.js"></script>
 <script>
     $(function () {
         $(".select2_demo_1").select2();
-        //Profile TextArea
-        $("#notes").markdown({
-            autofocus:false,
-            savable:false,
-            hiddenButtons: ['cmdPreview', 'cmdImage', 'cmdQuote', 'cmdCode', 'cmdUrl'],
-        });
         //Includes, dont forget to remove.
         $("#includeSidebar").load("sidebar.html");
         $("#includeTopNavbar").load("topNavbar.html");
-
+        $("#todo, #inprogress, #completed").sortable({
+            connectWith: ".connectList",
+            update: function( event, ui ) {
+                var todo = $( "#todo" ).sortable( "toArray" );
+                var inprogress = $( "#inprogress" ).sortable( "toArray" );
+                var completed = $( "#completed" ).sortable( "toArray" );
+                $('.output').html("ToDo: " + window.JSON.stringify(todo) + "<br/>" + "In Progress: " + window.JSON.stringify(inprogress) + "<br/>" + "Completed: " + window.JSON.stringify(completed));
+            }
+        }).disableSelection();
     });
 </script>
 </body>
